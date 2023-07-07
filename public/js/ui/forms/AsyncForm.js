@@ -6,44 +6,51 @@
  * для последующей обработки
  * */
 class AsyncForm {
-  /**
-   * Если переданный элемент не существует,
-   * необходимо выкинуть ошибку.
-   * Сохраняет переданный элемент и регистрирует события
-   * через registerEvents()
-   * */
-  constructor(element) {
+    /**
+     * Если переданный элемент не существует,
+     * необходимо выкинуть ошибку.
+     * Сохраняет переданный элемент и регистрирует события
+     * через registerEvents()
+     * */
+    constructor(element) {
+        if (!element) {
+            throw new Error("переданный элемент не существует");
+        }
 
-  }
+        this.element = element;
+        this.registerEvents();
+    }
 
-  /**
-   * Необходимо запретить отправку формы и в момент отправки
-   * вызывает метод submit()
-   * */
-  registerEvents() {
+    /**
+     * Необходимо запретить отправку формы и в момент отправки
+     * вызывает метод submit()
+     * */
+    registerEvents() {
+        this.element.addEventListener('submit', (e) => this.submit(e));
+    }
 
-  }
+    /**
+     * Преобразует данные формы в объект вида
+     * {
+     *  'название поля формы 1': 'значение поля формы 1',
+     *  'название поля формы 2': 'значение поля формы 2'
+     * }
+     * */
+    getData() {
+        const formData = new FormData(this.element);
+        return Object.fromEntries(formData.entries());
+    }
 
-  /**
-   * Преобразует данные формы в объект вида
-   * {
-   *  'название поля формы 1': 'значение поля формы 1',
-   *  'название поля формы 2': 'значение поля формы 2'
-   * }
-   * */
-  getData() {
+    onSubmit(options){
+    }
 
-  }
-
-  onSubmit(options){
-
-  }
-
-  /**
-   * Вызывает метод onSubmit и передаёт туда
-   * данные, полученные из метода getData()
-   * */
-  submit() {
-
-  }
+    /**
+     * Вызывает метод onSubmit и передаёт туда
+     * данные, полученные из метода getData()
+     * */
+    submit(e) {
+        e.preventDefault();
+        const dataForm = this.getData();
+        this.onSubmit(dataForm);
+    }
 }

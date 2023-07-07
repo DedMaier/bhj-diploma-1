@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "name": "demo",
+      "email": "demo@demo",
+      "password": "demo",
+      "id": "1"
+    },
+    {
+      "name": "demos",
+      "email": "demos@demos",
+      "password": "demos",
+      "id": "66tl3awljsa1xg3"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "demo",
+      "user_id": "66tl3awljsa1xg3",
+      "id": "66tlb0gljsa2da1"
+    },
+    {
+      "name": "Иван",
+      "user_id": "1",
+      "id": "66tl81oljsaovxc"
+    },
+    {
+      "name": "магазин",
+      "user_id": "1",
+      "id": "66tl90kljsappr7"
+    },
+    {
+      "name": "Банк",
+      "user_id": "1",
+      "id": "66tl5xkljsas77o"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "66tl8uoljsa4406",
+      "type": "income",
+      "name": "Ivan",
+      "sum": 5000,
+      "account_id": "66tlb0gljsa2da1",
+      "user_id": "66tl3awljsa1xg3",
+      "created_at": "2023-07-07T07:52:31.301Z"
+    },
+    {
+      "id": "66tl8fsljsapci5",
+      "type": "income",
+      "name": "Иван",
+      "sum": 10000,
+      "account_id": "66tl81oljsaovxc",
+      "user_id": "1",
+      "created_at": "2023-07-07T08:09:02.092Z"
+    },
+    {
+      "id": "66tlalwljsasstu",
+      "type": "income",
+      "name": "Приход",
+      "sum": 2000000,
+      "account_id": "66tl5xkljsas77o",
+      "user_id": "1",
+      "created_at": "2023-07-07T08:11:43.217Z"
+    },
+    {
+      "id": "66tla6kljsav8ad",
+      "type": "income",
+      "name": "Продажа",
+      "sum": 100000,
+      "account_id": "66tl90kljsappr7",
+      "user_id": "1",
+      "created_at": "2023-07-07T08:13:36.564Z"
+    },
+    {
+      "id": "66tlar4ljsavyfg",
+      "type": "expense",
+      "name": "Покупка еды",
+      "sum": 3000,
+      "account_id": "66tl81oljsaovxc",
+      "user_id": "1",
+      "created_at": "2023-07-07T08:14:10.443Z"
+    },
+    {
+      "id": "66tlo4ljsfq120",
+      "type": "expense",
+      "name": "Выдача кредита",
+      "sum": 500000,
+      "account_id": "66tl5xkljsas77o",
+      "user_id": "1",
+      "created_at": "2023-07-07T10:29:31.992Z"
+    }
+  ]
+}
